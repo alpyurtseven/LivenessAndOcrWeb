@@ -1,0 +1,56 @@
+@page "/info"
+
+<MudText Typo="Typo.h4">Liveness and OCR Application</MudText>
+<MudPaper Class="pa-4">
+    <h3>Features</h3>
+    <ul>
+        <li><strong>Liveness Detection:</strong> Uses the user's webcam to verify if the person is live.</li>
+        <li><strong>OCR:</strong> Allows users to upload identity documents and extracts text from them.</li>
+        <li><strong>Tab Navigation:</strong> Provides a clean interface with tab navigation using MudBlazor.</li>
+    </ul>
+
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>.NET 6 SDK or later</li>
+        <li>A modern web browser</li>
+        <li>A webcam (for liveness detection)</li>
+        <li>MudBlazor library</li>
+    </ul>
+
+    <h3>Getting Started</h3>
+    <h4>Installation</h4>
+    <ol>
+        <li>Clone the repository:
+            <pre><code>git clone https://github.com/your-username/liveness-and-ocr.git
+cd liveness-and-ocr</code></pre>
+        </li>
+        <li>Restore the dependencies:
+            <pre><code>dotnet restore</code></pre>
+        </li>
+        <li>Build the project:
+            <pre><code>dotnet build</code></pre>
+        </li>
+        <li>Run the application:
+            <pre><code>dotnet run</code></pre>
+        </li>
+        <li>Open your browser and navigate to <a href="https://localhost:5001">https://localhost:5001</a>.</li>
+    </ol>
+
+    <h3>Project Structure</h3>
+    <ul>
+        <li><strong>Pages</strong>
+            <ul>
+                <li><code>Home.razor</code>: Main page with tab navigation.</li>
+                <li><code>Info.razor</code>: Home tab content.</li>
+                <li><code>OCR.razor</code>: Component for reading identity documents and performing OCR.</li>
+                <li><code>Liveness.razor</code>: Component for liveness detection using the webcam.</li>
+            </ul>
+        </li>
+        <li><strong>wwwroot</strong>
+            <ul>
+                <li><code>camera.js</code>: JavaScript file for accessing the webcam.</li>
+                <li><code>ocr.js</code>: JavaScript file for performing OCR using Tesseract.js.</li>
+            </ul>
+        </li>
+    </ul>
+</MudPaper>

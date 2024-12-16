@@ -1,0 +1,35 @@
+@page "/liveness"
+@using Microsoft.JSInterop
+@inject IJSRuntime JS
+
+<div class="d-flex justify-content-center align-items-center flex-column">
+      <MudText Typo="Typo.h4" Class="current-task"></MudText>
+    <MudCard Class="mt-5 red-border camera-card pa-4">
+        <video id="video" width="1280" height="720" autoplay class="d-none"></video>
+        <canvas id="output_canvas" width="1280" height="720"></canvas>
+        <MudCardContent Class="d-flex justify-content-center align-items-center">
+            <MudText Typo="Typo.h4">Check Liveness</MudText>
+        </MudCardContent>
+        <MudCardActions Class="d-flex justify-content-center align-items-center">
+            <MudButton OnClick="StartCamera">Start Camera</MudButton>
+        </MudCardActions>
+    </MudCard>
+</div>
+<style>
+.red-border {
+    border: 3px dotted red !important;
+}
+
+.green-border {
+    border: 3px dotted green !important;
+}
+
+
+</style>
+
+@code {
+    private async Task StartCamera()
+    {
+        await JS.InvokeVoidAsync("startCamera");
+    }
+}

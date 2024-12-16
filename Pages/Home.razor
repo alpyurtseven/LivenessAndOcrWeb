@@ -1,0 +1,24 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div class="d-flex justify-content-center align-items-center">
+<MudTabs Outlined="true" Color="Color.Dark" Class="d-flex justify-content-center align-items-center">
+    <MudTabPanel Text="Home" Icon="@Icons.Material.Filled.Home">
+        <ChildContent>
+            <Info />
+        </ChildContent>
+    </MudTabPanel>
+    <MudTabPanel Text="Read Identity Document" Icon="@Icons.Material.Filled.CallToAction">
+        <ChildContent>
+            <OCR />
+        </ChildContent>
+    </MudTabPanel>
+    <MudTabPanel Text="Check Liveness" Icon="@Icons.Material.Filled.CoPresent">
+        <ChildContent>
+            <Liveness />
+        </ChildContent>
+    </MudTabPanel>
+</MudTabs>
+</div>
+
